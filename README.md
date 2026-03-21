@@ -31,3 +31,7 @@ $env:PGCLIENTENCODING="UTF8"
 $env:PGPASSFILE="NUL"
 python main.py --all --db-password パスワード
 ```
+
+# 可視化
+<img width="1416" height="818" alt="image" src="https://github.com/user-attachments/assets/641cf6bd-3044-4972-92b4-6282ce70010c" />
+
