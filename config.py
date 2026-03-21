@@ -27,35 +27,36 @@ class DBConfig:
 
 @dataclass
 class DataConfig:
-    """サンプルデータ生成の設定"""
-    n_users: int = 500
-    n_items: int = 350          # 密度向上のためアイテム数を絞る
-    n_purchases: int = 25000    # 購入データを大幅増
-    n_views: int = 60000        # 閲覧データ増
-    n_favorites: int = 12000    # お気に入りデータ増
+    """サンプルデータ生成の設定 (CPU 16GB 向け軽量版)"""
+    n_users: int = 200          # 500 → 200
+    n_items: int = 150          # 350 → 150
+    n_purchases: int = 8000     # 25000 → 8000
+    n_views: int = 15000        # 60000 → 15000
+    n_favorites: int = 4000     # 12000 → 4000
     seed: int = 42
+    # 密度: (8000+15000+4000) / (200×150) = 90%  ← 十分リッチ
 
 
 @dataclass
 class ModelConfig:
-    """GNN モデルのハイパーパラメータ"""
-    embedding_dim: int = 64
-    hidden_channels: int = 128
-    out_channels: int = 64
-    num_layers: int = 3
-    heads: int = 4
+    """GNN モデルのハイパーパラメータ (CPU 軽量版)"""
+    embedding_dim: int = 32
+    hidden_channels: int = 64   # 128 → 64
+    out_channels: int = 32      # 64 → 32
+    num_layers: int = 2         # 3 → 2
+    heads: int = 2              # 4 → 2
     dropout: float = 0.2
     learning_rate: float = 5e-3
     weight_decay: float = 1e-5
-    epochs: int = 200
-    batch_size: int = 1024
+    epochs: int = 100           # 200 → 100
+    batch_size: int = 512       # 1024 → 512
     val_ratio: float = 0.1
     test_ratio: float = 0.1
-    early_stop_patience: int = 50
+    early_stop_patience: int = 30  # 50 → 30
     device: str = "cpu"
-    encoder_type: str = "gat"       # "gat" or "appnp"
-    teleport_prob: float = 0.15     # APPNP: PPR テレポート確率 α
-    num_iterations: int = 10        # APPNP: PPR 反復回数 K
+    encoder_type: str = "gat"
+    teleport_prob: float = 0.15
+    num_iterations: int = 5     # 10 → 5 (APPNP 反復を半減)
 
 
 @dataclass

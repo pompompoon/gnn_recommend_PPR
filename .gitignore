@@ -1,0 +1,7 @@
+﻿__pycache__/
+*.pyc
+checkpoints/*.pt
+*.egg-info/
+.env
+network.html
+network.png
