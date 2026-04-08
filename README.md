@@ -35,5 +35,14 @@ python main.py --all --db-password パスワード
 # 可視化
 <img width="1416" height="818" alt="image" src="https://github.com/user-attachments/assets/641cf6bd-3044-4972-92b4-6282ce70010c" />
 
-<img width="960" height="436" alt="image" src="https://github.com/user-attachments/assets/a6c6e171-a544-4d10-8dac-4167f07958a1" />
+# 前回 → 今回の比較
+
+| 指標           | 前回 (GAT, 800items) | 今回 (APPNP, 150items) | 改善     |
+|----------------|----------------------|------------------------|----------|
+| Recall@10      | 0.0138               | **0.0395**             | 2.9倍    |
+| NDCG@10        | 0.0097               | **0.0262**             | 2.7倍    |
+| HitRate@10     | 0.0376               | **0.1117**             | 3.0倍    |
+| MRR            | 0.0151 (66位)        | **0.0406** (25位)      | 2.7倍    |
+| Item Coverage  | 10.3%                | **98.7%**              | 大幅改善 |
+| ILD (多様性)   | 0.152                | **0.319**              | 2.1倍    |
 
