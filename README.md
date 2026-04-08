@@ -35,3 +35,5 @@ python main.py --all --db-password パスワード
 # 可視化
 <img width="1416" height="818" alt="image" src="https://github.com/user-attachments/assets/641cf6bd-3044-4972-92b4-6282ce70010c" />
 
+<img width="960" height="436" alt="image" src="https://github.com/user-attachments/assets/a6c6e171-a544-4d10-8dac-4167f07958a1" />
+
