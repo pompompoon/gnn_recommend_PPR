@@ -46,3 +46,16 @@ python main.py --all --db-password パスワード
 | Item Coverage  | 10.3%                | **98.7%**              | 大幅改善 |
 | ILD (多様性)   | 0.152                | **0.319**              | 2.1倍    |
 
+
+指標	GAT	APPNP	勝者	差
+Precision@10	0.0117	0.0117	引分	—
+Recall@10	0.0267	0.0395	APPNP	48%
+NDCG@10	0.0239	0.0262	APPNP	10%
+HitRate@10	0.1066	0.1117	APPNP	5%
+MRR	0.0490 (20位)	0.0406 (25位)	GAT	GAT優位
+MAP@10	0.0119	0.013	APPNP	9%
+Item Coverage	94.00%	98.70%	APPNP	5%
+ILD (多様性)	0.192	0.319	APPNP	66%
+<img width="889" height="325" alt="image" src="https://github.com/user-attachments/assets/596aa118-b44e-42df-a352-23108993eaef" />
+
+
